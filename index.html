@@ -1,171 +1,45 @@
-<link rel="stylesheet" href="./styles.css">
-<h1>MATEMATIKA BOYICHA SAVOLLAR</h1>
-<form id="userForm">
-    <label for="name" >Ismingiz:</label>
-    <input id="name" type="text" placeholder="Ismingizni kiriting" required />
-    <br><br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="header" >
+            
+            
+            <img id="image1" src="https://cdn.prod.website-files.com/63fda77e5fd49598bbf00892/64358005d142a37eee9ad74c_Java-Logo.png" alt="">
+            <br>
 
-    <label style=" font-size: 10px; color: deepskyblue ;">A(2; 1) nuqtadan o‘tib, koordinata o‘qlariga
-urinuvchi aylana tenglamasini tuzing.
-:</label>
-    <input id="quest1" type="text" placeholder="javobni kiriting" required  />
-    <br><br>
+            <div id="button1">
+                <button class="btn"><i class="fa fa-bars"></i> =</button>
+            </div>
+            
 
-    <label style=" font-size: 10px; color: deepskyblue ;">bc − a
-2
-ab −
-b
-2 − ac
-bc +
-ab − c
-2
-ac
-ifodani kasrga
-aylantiring.</label>
-    <input id="quest2" type="text" placeholder="javobni kiriting" required />
-    <br><br>
+        </div>
+     
+        <div id="body">
+          
+            <div id="container_left">
+                <h1>JAVA</h1>
+               
+            <h3>Java is a high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible.</h3>
+            <p>Platform Independence: Compiled Java bytecode executes on any system with an installed JVM regardless of underlying OS architecture.</p>
+           <div id="container_right">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRKe3FZAc3sYVNUGIHMG6xqeJshizCQp_NoioxQLjouA&s=10" alt="">
+           </div>
+            <br>
+            <div id="button2">
+                <button class="btn"><i class="fa fa-bars"></i> Menu</button>
+            </div>
+    <div id="footer">
 
-    <label style=" font-size: 10px; color: deepskyblue ;">Teploxod ikki pristan oraligidagi masofani daryo
-oqimi bo‘yicha 7 soat, oqimga qarshi 9 soatda
-o‘tadi. Agar oqimning tezligi 2 km/soat bo‘lsa,
-pristanlar orasidagi masofani (km) aniqlang.
-</label>
-    <input id="quest3" type="text" placeholder="javobni kiriting" required />
-    <br><br>
-
-
-    <label style=" font-size: 10px; color: deepskyblue ;">Balandligi asosining diametriga teng silindrning yon sirti 16π ga teng. Silindr asosining diametrini toping</label>
-    <input id="quest4" type="text" placeholder="javobni kiriting" required />
-    <br><br>
-
-
-    <label style=" font-size: 10px; color: deepskyblue ;">Tekislikdan h uzoqlikda joylashgan nuqtadan
-tekislikka o‘tkazilgan va tekislik bilan 30◦
-li
-burchak hosil qiladigan og‘maning uzunligini
-toping.
-</label>
-    <input id="quest5" type="text" placeholder="javobni kiriting" required />
-    <br><br>
-
-
-
-    <label style=" font-size: 10px; color: deepskyblue ;">Aylananing uzunligi shu aylananing 40◦
-li yoyi
-uzunligidan necha foiz ko‘p?</label>
-    <input id="quest6" type="text" placeholder="javobni kiriting" required />
-    <br><br>
-
-
-    <label style=" font-size: 10px; color: deepskyblue ;">vtomashina Toshkentdan Samarqandga tomon
-yo‘lga chiqdi. Yo‘lning 2
-5
-qismini rejadagi
-tezlikda o‘tgach, tezligini 20% ga oshirdi va
-Samarqandga mo‘ljaldagidan yarim soat oldin
-keldi. Avtomashina ikki shahar orasidagi
-masofani necha soatda o‘tgan?</label>
-    <input id="quest7" type="text" placeholder="javobni kiriting" required />
-    <br><br>
-
-
-
-    <button type="submit" style="background-color: chartreuse; border-radius: 10px; border-style: inset;">Yuborish</button>
-</form>
-
-<script>
-    let formElement = document.getElementById("userForm");
+        </div>
+    </div>
     
-    formElement.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        let question1 = document.getElementById("quest1").value.trim();
-        let question2 = document.getElementById("quest2").value.trim();
-        let question3 = document.getElementById("quest3").value.trim();
-        let question4 = document.getElementById("quest4").value.trim();
-        let question5 = document.getElementById("quest5").value.trim();
-        let question6 = document.getElementById("quest6").value.trim();
-        let question7 = document.getElementById("quest7").value.trim();
-        let name = document.getElementById("name").value.trim();
-        
-
-        if (!name || !question1 || !question2 || !question3 || !question4 || !question5 || !question6 || !question7 ) {
-            alert("Iltimos, barcha maydonlarni to'ldiring!");
-            return;
-        }
-
-        let MESSAGE1 = `Ismi: ${name}\nJavobi: ${question1}`;
-        let MESSAGE2 = `\nJavobi: ${question2}`;
-        let MESSAGE3 = `\nJavobi: ${question3}`;
-        let MESSAGE4 = `\nJavobi: ${question4}`;
-        let MESSAGE5 = `\nJavobi: ${question5}`;
-        let MESSAGE6 = `\nJavobi: ${question6}`;
-        let MESSAGE7 = `\nJavobi: ${question7}`;
-
-        let ball = 0
-        if(question1 == 2){
-            ball+=10
-        }
-        if(question2 == 68){
-            ball+=10
-        }
-        if(question3 == 1){
-            ball+=10
-        }
-        if(question4 == 1){
-            ball+=10
-        }
-        if(question5 == 40){
-            ball+=10
-        }
-        if(question6 == -8){
-            ball+=10
-        }
-        if(question7 == 66){
-            ball+=10
-        }
-        
-
-        console.log(MESSAGE1)
-        console.log(MESSAGE2)
-        console.log(MESSAGE3)
-        console.log(MESSAGE4)
-        console.log(MESSAGE5)
-        console.log(MESSAGE6)
-
-        let bot_token = "8876413074:AAFLY--35KWA4lpzkPACrFNAWpy-CVbcvt8";
-        let chat_id = 8718249166;
-        
-        // URL to'g'rilandi
-        const url = `https://api.telegram.org/bot${bot_token}/sendMessage`;
-
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                chat_id: chat_id,
-                text: 
-                'savol 1: '+ MESSAGE1 + '\n' +
-                'savol 2: '+ MESSAGE2 + '\n' +
-                'savol 3: '+ MESSAGE3 + '\n' +
-                'savol 4: '+ MESSAGE4 + '\n' +
-                'savol 5: '+ MESSAGE5 + '\n' +
-                'savol 6: '+ MESSAGE6 + '\n'+
-                ball
-            })  
-        }) 
-        .then(response => response.json())
-        .then(data => {
-            if (data.ok) {
-                alert('Maʼlumotlar botga yuborildi!');
-                formElement.reset();
-            } else {
-                console.error('Telegramdan xatolik qaytdi:', data.description);
-            }
-        })
-        .catch(error => console.error('Tarmoqda xatolik yuz berdi:', error));
-    });
-</script>
-
+</body>
+<script src="./app.js"></script>
+</html> 
